@@ -1,0 +1,26 @@
+#include<iostream>
+#include<bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+main(){
+	int t; cin >> t;
+	while(t--){
+		ll n; cin >> n;
+		for(int i=2;i<=sqrt(n);i++){
+			if(n%i==0){
+				int cnt=0;
+				while(n%i==0){
+					n/=i;
+	                cnt++;
+				}
+				cout << i <<" ";
+				if(cnt>1){
+					for(int k=1;k<cnt;k++) cout << i << " ";
+				}
+			}
+		}
+		if(n!=1) cout << n << endl;
+		cout << endl;
+	}
+}
