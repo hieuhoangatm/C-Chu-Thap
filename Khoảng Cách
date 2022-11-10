@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+#include<iomanip>
+using namespace std;
+
+main(){
+	int t; cin >> t;
+	while(t--){
+		double x,y, a,b;
+		cin >> x >> y >> a >> b;
+		double s;
+		s=sqrt(pow(a-x,2)+pow(b-y,2));
+		cout << fixed << setprecision(4) << s << endl;//setprecision(4);
+	}
+} 
