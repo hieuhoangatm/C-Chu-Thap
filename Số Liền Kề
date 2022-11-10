@@ -1,0 +1,19 @@
+#include<iostream>
+#include<string>
+#include<bits/stdc++.h>
+using namespace std;
+
+main(){
+	int t; cin >> t;
+	cin.ignore();
+	while(t--){
+		char a[10000]; cin >> a;
+		int dem=0;
+	    for(int i=1;i<strlen(a);i++){
+	    	int x= (int)a[i]-a[i-1];
+	    	if(x==1 || x==-1) dem++;
+		}
+		if(dem==strlen(a)-1) cout << "YES\n";
+		else cout << "NO\n";
+	}
+} 
