@@ -1,0 +1,23 @@
+#include<iostream>
+#include<bits/stdc++.h>
+
+using namespace std;
+using ll = long long;
+main(){
+	int t; cin >> t;
+	while(t--){
+		ll n; cin >> n;
+		ll a[10000], dem=0;
+		for(ll i=2;i<=sqrt(n);i++){
+			if(n%i==0){
+				while(n%i==0){
+					n/=i;
+				}
+				dem++;
+				a[dem]=i;
+			}
+		}
+		if(n!=1) a[dem]=n;
+		cout << a[dem] << endl;
+	}
+}
