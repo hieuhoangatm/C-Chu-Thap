@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+main(){
+	int t; cin >> t;
+	cin.ignore();
+	while(t--){
+		string s; cin >> s;
+		int res=s.find("084");
+		string er=s.erase(res,3);
+		cout << er << endl;
+	}
+}
