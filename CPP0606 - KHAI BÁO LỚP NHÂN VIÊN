@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class NhanVien{
+	private:
+		string ma, ten, gt, ns,dc,hd;
+		long long mt;
+	public:
+		NhanVien(){
+			ma=ten=gt=ns=dc=hd="";
+			mt=0;
+		}
+		NhanVien(string ten, string gt,string ns, string dc,long long mt,string hd){
+			this->ten = ten;
+			this->ns= ns;
+			this->gt = gt;
+			this->dc=dc;
+			this->hd=hd;
+			this->mt=mt;
+		}
+		void nhap(){
+			getline(cin,ten);
+			cin >> gt >> ns;
+			cin.ignore();
+			getline(cin,dc);
+			cin >> mt;
+			cin.ignore();
+			cin >> hd;
+		}
+		void xuat(){
+			ma="00001";
+			cout << ma<<" "<<ten<<"  " << gt<<" " << ns<<" "<< dc<<" " << mt <<" "<< hd << endl;
+		}
+};
+
+int main(){
+    NhanVien a;
+    a.nhap();
+    a.xuat();
+    return 0;
+}
