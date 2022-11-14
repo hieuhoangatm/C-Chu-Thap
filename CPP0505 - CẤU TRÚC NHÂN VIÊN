@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+using ll =long long;
+struct NhanVien{
+	string ma="00001";
+	string  hoten, gt, ngaysinh, diachi,mathue,nkhd;
+};
+void nhap(NhanVien &p){
+	getline(cin,p.hoten);
+	cin >> p.gt >> p.ngaysinh;
+	cin.ignore();
+	getline(cin,p.diachi);
+	cin >> p.mathue >>p.nkhd;
+}
+void in(NhanVien p){
+	cout << p.ma << " " << p.hoten << " "<<p.gt << " " << p.ngaysinh << " " << p.diachi << " " <<p.mathue << " " << p.nkhd << endl;
+}
+int main(){
+    struct NhanVien a;
+    nhap(a);
+    in(a);
+    return 0;
+}
