@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+using ll =long long;
+struct SinhVien{
+	string id,hoten,lop,ngaysinh;
+	double gpa;
+};
+
+void nhap(SinhVien &p){
+	getline(cin, p.hoten);
+	cin >> p.lop >> p.ngaysinh;
+	cin >> p.gpa;
+	cin.ignore();
+	if(p.ngaysinh[1]=='/') p.ngaysinh="0"+p.ngaysinh;
+	if(p.ngaysinh[4]=='/') p.ngaysinh.insert(3,"0");
+}
+
+void in(SinhVien p){
+	cout << "B20DCCN001" << " " << p.hoten << " " << p.lop << " " << p.ngaysinh << " " << fixed << setprecision(2) << p.gpa << endl;
+}
+int main(){
+    struct SinhVien a;
+    nhap(a);
+    in(a);
+    return 0;
+}
