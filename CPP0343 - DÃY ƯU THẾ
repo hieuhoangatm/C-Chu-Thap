@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+main(){
+	int t; cin >> t;
+	while(t--){
+		int dem1=0,dem2=0,dem3=0;
+		char s=' ';
+		while(s!='\n'){
+		    int x; cin >> x;
+		    if(x%2==0) dem1++;
+		    else dem2++;
+		    dem3++;
+		    s=getchar();
+	    }
+	    if(dem3%2==0 && dem1>dem2 || dem3%2==1 && dem2>dem1) cout << "YES\n";
+	    else cout << "NO\n";
+	    cout << endl;
+	}
+}
