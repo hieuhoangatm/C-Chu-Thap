@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+//ll pow1(ll a, ll b){
+//	ll res=1;
+//	while(b){// while(b)
+//		if(b%2==1){
+//			res*=a;
+//		}
+//		b/=2;
+//		a*=a;	
+//	}
+//	return res;
+//}
+
+ll pow3(ll a, ll b, ll c){
+	if(b==0) 
+		return 1;
+	ll x=pow3(a,b/2,c) %c;
+	if(b%2==1) return (((x*x)%c)*a)%c;
+	else return (x*x) % c;
+}
+main(){
+	int t; cin >> t;
+	while(t--){
+		ll a, b,c; cin >> a >> b >> c;
+		cout << pow3(a,b,c) << endl;
+	}
+}
